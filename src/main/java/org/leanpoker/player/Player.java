@@ -12,6 +12,7 @@ public class Player {
     public static int betRequest(JsonElement request) {
         Map<String,Object> result = new Gson().fromJson(request, Map.class);
         Double currentBuyIn = (Double) result.get("current_buy_in");
+        System.err.println(result.get("players"));
         return currentBuyIn.intValue() + 50;
     }
 
