@@ -11,9 +11,11 @@ public class Player {
 
     public static int betRequest(JsonElement request) {
         Map<String,Object> result = new Gson().fromJson(request, Map.class);
-        return 50;
+
+        return 150;
     }
 
     public static void showdown(JsonElement game) {
+        Map<String,Object> result = new Gson().fromJson(game, Map.class);
     }
 }
