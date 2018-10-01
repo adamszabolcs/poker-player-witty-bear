@@ -29,7 +29,7 @@ public class Player {
         int currentBuyIn = object.getAsJsonObject().get("current_buy_in").getAsInt();
 
 
-        return 0;
+        return currentBuyIn;
     }
 
     public static void showdown(JsonElement game) {
