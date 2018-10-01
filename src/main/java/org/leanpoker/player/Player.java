@@ -18,12 +18,12 @@ public class Player {
         JsonObject object = request.getAsJsonObject();
         JsonArray players = object.getAsJsonArray("players");
         for (JsonElement player: players){
-            /*JsonArray playerHand = player.getAsJsonObject().get("hole_cards").getAsJsonArray();
-            if (player.getAsJsonObject().get("name").getAsString().equals("Witty Bear") && playerHand.size() == 2){
+            if (player.getAsJsonObject().get("name").getAsString().equals("Witty Bear") && player.getAsJsonObject().get("hole_cards").getAsJsonArray().size() == 2){
+                JsonArray playerHand = player.getAsJsonObject().get("hole_cards").getAsJsonArray();
                 if (playerHand.get(0).getAsJsonObject().get("rank").equals(playerHand.get(1).getAsJsonObject().get("rank"))) {
                     return player.getAsJsonObject().get("stack").getAsInt();
                 }
-            }*/
+            }
             System.err.println("\n Player: " + player + "\n");
         }
         int currentBuyIn = object.getAsJsonObject().get("current_buy_in").getAsInt();
