@@ -1,9 +1,7 @@
 package org.leanpoker.player;
 
+import com.google.gson.Gson;
 import com.google.gson.JsonElement;
-import com.google.gson.JsonParser;
-
-import java.util.HashMap;
 import java.util.Map;
 
 public class Player {
@@ -12,7 +10,7 @@ public class Player {
 
 
     public static int betRequest(JsonElement request) {
-//        JsonElement root = new JsonParser().parse(request);
+        Map<String,Object> result = new Gson().fromJson(request, Map.class);
         return 50;
     }
 
