@@ -16,5 +16,6 @@ public class Player {
     }
 
     public static void showdown(JsonElement game) {
+        Map<String,Object> result = new Gson().fromJson(game, Map.class);
     }
 }
