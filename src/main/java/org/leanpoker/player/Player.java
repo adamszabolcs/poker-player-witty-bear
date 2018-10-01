@@ -12,7 +12,7 @@ public class Player {
 
 
     public static int betRequest(JsonElement request) {
-        JsonElement root = new JsonParser().parse(request);
+//        JsonElement root = new JsonParser().parse(request);
         return 50;
     }
 
