@@ -30,9 +30,6 @@ public class Player {
                         }
                     }
                 }
-                if (currentBuyIn >= player.getAsJsonObject().get("stack").getAsInt()) {
-                    currentBuyIn = 0;
-                }
             }
             System.err.println("\n Player: " + player + "\n");
         }
