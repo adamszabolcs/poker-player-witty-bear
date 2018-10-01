@@ -11,7 +11,8 @@ public class Player {
 
     public static int betRequest(JsonElement request) {
         Map<String,Object> result = new Gson().fromJson(request, Map.class);
-        return 50;
+        Double currentBuyIn = (Double) result.get("minimum");
+        return currentBuyIn.intValue() + 50;
     }
 
     public static void showdown(JsonElement game) {
